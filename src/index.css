@@ -1,0 +1,25 @@
+
+body {
+  /* background-color: #282c34;
+   */
+   color: white;
+
+  background-image: url("background.jpg");
+  /* Keep the inherited background full size. */
+  background-attachment: fixed; 
+  background-size: cover;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Poppins;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
