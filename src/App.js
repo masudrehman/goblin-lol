@@ -6,7 +6,7 @@ import abi from './abi.json';
 import { ethers } from "ethers";
 // import { useWeb3Contract, useMoralis } from "react-moralis";
 
-import { useAlert } from 'react-alert'
+// import { useAlert } from 'react-alert'
 
 import { useContractRead, useContractWrite, useNetwork } from 'wagmi'
 
@@ -19,7 +19,7 @@ import { useContractRead, useContractWrite, useNetwork } from 'wagmi'
 
 function App(){
 
-  const alert = useAlert()
+  // const alert = useAlert()
   const [count, setCount] = useState(1);
   const { data: account } = useAccount()
   const [totalSupply, setTotalSupply] = useState(0)
@@ -36,11 +36,11 @@ function App(){
       'mint',
       {   
         onSuccess: (txHash) => {
-          alert.success('Transaction Successful!')
+          // alert.success('Transaction Successful!')
         },
         onError: (error) => {
           console.log(error)
-          alert.error(error.message)
+          // alert.error(error.message)
         },
           args: [count],
           // overrides: {
