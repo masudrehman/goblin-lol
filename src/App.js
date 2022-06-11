@@ -24,38 +24,8 @@ function App(){
   const { data: account } = useAccount()
   const [totalSupply, setTotalSupply] = useState(0)
     //TODO: get contract address
-    const contractAddress = "0x22D6D489C959026d660dC819dAACd2A5AdddDD35"
- 
-
-
-  // const { data, error, runContractFunction, isFetching, isLoading } =
-  //   useWeb3Contract();
-      // const totalSupply= useContractRead(
-      //   {
-      //     addressOrName: contractAddress,
-      //     contractInterface: abi.abi,
-      //   },
-      //   'totalSupply',
-      //   {
-      //       watch: true,
-      //   }
-      // )
-
-      // const hasClaimed = useContractRead(
-      //   {
-      //     addressOrName: contractAddress,
-      //     contractInterface: abi.abi,
-      //   },
-      //   'hasClaimed',
-      //   {
-      //     args: account.address,
-      //   },
-      // )
-    
+    const contractAddress = "0xE63F37E5B8C3C771b3BeA9eE38e4070afA92a336"
   
-   
-  
- 
   
 
     const { data, isError, isLoading, write } = useContractWrite(
@@ -87,10 +57,7 @@ function App(){
 
   const increment = async () => {
     setCount(count + 1);
-    // const s = await goblinContract.totalSupply();
-    // const c = ethers.BigNumber.from(s);
-    // console.log(c.toNumber())
-    // setTotalSupply(c.toNumber())
+
 
    
   }
@@ -112,7 +79,6 @@ function App(){
     const goblinContract = new ethers.Contract(contractAddress, abi.abi, provider);
      const s = await goblinContract.totalSupply();
      const c = ethers.BigNumber.from(s);
-     console.log(c.toNumber())
     setTotalSupply(c.toNumber())
     if (await goblinContract.hasClaimed(account.address) == false) {
       if(count == 1) {
@@ -157,7 +123,7 @@ function App(){
         </div>
       <div className="App-header">
         <div className='te'>
-        <p className='texty'>gnome_shit_lol MINT:</p>
+        <p className='texty'>goblin_shit_lol MINT:</p>
       <p className="texty2">1 FREE mint per wallet then 0.03 ETH</p>
         </div>
       
